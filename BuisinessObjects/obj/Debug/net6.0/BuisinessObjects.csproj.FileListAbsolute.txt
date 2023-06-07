@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\bin\Debug\net6.0\BuisinessObjects.deps.json
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\bin\Debug\net6.0\BuisinessObjects.runtimeconfig.json
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\bin\Debug\net6.0\BuisinessObjects.dll
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\bin\Debug\net6.0\BuisinessObjects.pdb
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.AssemblyInfo.cs
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.dll
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\refint\BuisinessObjects.dll
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.pdb
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\BuisinessObjects.genruntimeconfig.cache
+C:\Users\Admin\source\repos\HoangDuyCuong_SE1608_A01\BuisinessObjects\obj\Debug\net6.0\ref\BuisinessObjects.dll

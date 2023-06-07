@@ -1,0 +1,45 @@
+﻿@page
+@model FlowerClient.Controllers.CartController;
+@{
+    ViewData["Title"] = "Your cart";
+}
+<h1>Your Cart</h1>
+
+<p>
+    <a asp-page="FlowerBouquets">Add New</a>
+</p>
+<form asp-action="Cart" asp-page-handler="update">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.cart)
+        {
+            <tr>
+                <td>@item.FlowerBouquet.FlowerBouquetName</td>
+                <td>$@item.FlowerBouquet.UnitPrice</td>
+                <td><input type="number" name="quantities" value="@item.Quantity" min="1" style="width: 50px;" /></td>
+                <td>
+                    $@(item.FlowerBouquet.UnitPrice * item.Quantity)
+                </td>
+                <td>
+                    <input class="btn btn-primary" type="submit" value="Update" /> |
+                    <a style="color:red" asp-page="cart" asp-action-handler="delete" asp-route-id="@item.FlowerBouquet.FlowerBouquetId">Delete</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="6" align="right">Total</td>
+            <td align="center">$@Model.Total</td>
+        </tr>
+    </table>
+</form>
+<form asp-controller="Cart" asp-action="cart" asp-page-handler="checkout">
+    <input class="btn btn-success" type="submit" value="Checkout" />
+</form>
+
+

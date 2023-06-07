@@ -1,0 +1,94 @@
+﻿@model IEnumerable<BuisinessObjects.Models.FlowerBouquet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FlowerBouquetName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitsInStock)
+                    </td>
+                    <td>
+                        @if(item.FlowerBouquetStatus == 0)
+                    {
+
+                        <button class="btn btn-danger">Deactivate</button>
+
+                    }
+                    else
+                    {
+                        <button class="btn btn-success">Activate</button>
+                    }
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.FlowerBouquetId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.FlowerBouquetId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.FlowerBouquetId">Delete</a>
+                        <a asp-action="Cart" asp-route-id="@item.FlowerBouquetId">Cart</a>
+
+
+
+
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@if (TempData["FlowerBouquets"] != null)
+{
+    <p class="text-danger">@TempData["FlowerBouquets"] </p>
+}

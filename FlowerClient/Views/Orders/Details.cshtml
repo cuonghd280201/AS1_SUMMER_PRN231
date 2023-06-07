@@ -1,0 +1,98 @@
+﻿@model BuisinessObjects.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShippedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShippedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Customer.City)
+        </dd>
+    </dl>
+</div>
+<div>
+    <h5>OrderDetails</h5>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                    @Html.DisplayNameFor(model => model.OrderDetails.ToList()[0].FlowerBouquet.FlowerBouquetName)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.OrderDetails.ToList()[0].Quantity)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.OrderDetails.ToList()[0].Discount)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.OrderDetails.ToList()[0].UnitPrice)
+            </th>
+       
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model.OrderDetails)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FlowerBouquet.FlowerBouquetName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Discount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UnitPrice)
+                        </td>
+                        
+                       
+                       
+                    </tr>
+                }
+            }
+    </tbody>
+</table>
+    <a asp-action="Edit" asp-route-id="@Model?.OrderId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
